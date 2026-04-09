@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Download, RefreshCw, FileText, UploadCloud, Search, CheckCircle, XCircle, FileSpreadsheet } from 'lucide-react';
 
 export function ComparisonDashboard({ 

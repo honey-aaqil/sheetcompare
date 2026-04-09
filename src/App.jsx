@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Play, HelpCircle, Layers } from 'lucide-react';
 import { useComparison } from './hooks/useComparison';
 import { FileUploader } from './components/FileUploader';

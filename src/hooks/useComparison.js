@@ -126,14 +126,14 @@ export function useComparison() {
         const lookupMap = {};
         state.data2.forEach(row => {
             const k = String(row[key]).trim().toLowerCase();
-            if (!lookupMap.hasOwnProperty(k)) {
+            if (!Object.prototype.hasOwnProperty.call(lookupMap, k)) {
                 lookupMap[k] = row[fetchField] !== undefined ? row[fetchField] : 'Not Found';
             }
         });
 
         return state.data1.map(row => {
             const val = String(row[key]).trim().toLowerCase();
-            const fetched = lookupMap.hasOwnProperty(val) ? lookupMap[val] : 'Not Found';
+            const fetched = Object.prototype.hasOwnProperty.call(lookupMap, val) ? lookupMap[val] : 'Not Found';
             return { ...row, __fetched: fetched };
         });
     }, [state.data1, state.data2, state.keyField, state.fetchField]);
@@ -146,14 +146,14 @@ export function useComparison() {
         const lookupMap = {};
         state.data2.forEach(row => {
             const k = String(row[key]).trim().toLowerCase();
-            if (!lookupMap.hasOwnProperty(k)) {
+            if (!Object.prototype.hasOwnProperty.call(lookupMap, k)) {
                 lookupMap[k] = row;
             }
         });
 
         return state.data1.map(row => {
             const val = String(row[key]).trim().toLowerCase();
-            if (!lookupMap.hasOwnProperty(val)) {
+            if (!Object.prototype.hasOwnProperty.call(lookupMap, val)) {
                 return { ...row, __sheet2Value: '—', __compareStatus: 'Not Found' };
             }
             const sheet2Row = lookupMap[val];
