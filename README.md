@@ -105,7 +105,3 @@ src/
 - Column mapping for mismatched header names
 - Pagination/virtualized rendering for very large datasets
 - Download reports with multiple tabs in one workbook
-
-## License
-
-No license file is currently included in this repository. Add a `LICENSE` file if you plan to distribute or open-source the project.
