@@ -100,7 +100,7 @@ export default function App() {
                     <section className="hero">
                         <div className="hero__badge">
                             <span className="hero__badge-dot"></span>
-                            <span>Powered by Smart React Engine</span>
+                            <span>Powered by React & SheetJS</span>
                         </div>
                         <h1 className="hero__title">
                             Compare Excel Sheets<br/>
